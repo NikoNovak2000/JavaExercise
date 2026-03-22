@@ -5,18 +5,19 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        // Implicit casting happens when there is no chance of a data loss, byte > short > int > long > float > double
-       short x = 1;
-       int y = x + 2;
-       System.out.println(y);
+        int result = Math.round(5.3F);
+        System.out.println(result);
 
-       // Explicit casting can happen only between compatible types
-        double z = 1.1;
-        int h = (int)z + 2;
-        System.out.println(h);
+        int result2 = (int)Math.ceil(5.3F);
+        System.out.println(result2);
 
-        String string = "1.1";
-        double k = Double.parseDouble(string) + 2;
-        System.out.println(k);
+        int result3 = (int)Math.floor(5.3F);
+        System.out.println(result3);
+
+        int result4 = Math.max(1,20);
+        System.out.println(result4);
+
+        int result5 = (int) (Math.random() * 100);
+        System.out.println(result5);
     }
 }
