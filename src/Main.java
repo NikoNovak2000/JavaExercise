@@ -5,16 +5,18 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        double result = (double)10 / (double)3;
-        System.out.println(result);
-        int x = 1;
-        int y = x++;
-        int z = ++x;
-        System.out.println(x);
-        System.out.println(y);
-        System.out.println(z);
+        // Implicit casting happens when there is no chance of a data loss, byte > short > int > long > float > double
+       short x = 1;
+       int y = x + 2;
+       System.out.println(y);
 
-        x -= 2;
-        System.out.println(x);
+       // Explicit casting can happen only between compatible types
+        double z = 1.1;
+        int h = (int)z + 2;
+        System.out.println(h);
+
+        String string = "1.1";
+        double k = Double.parseDouble(string) + 2;
+        System.out.println(k);
     }
 }
