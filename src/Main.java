@@ -1,17 +1,18 @@
 import java.awt.*;
 import java.sql.SQLOutput;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        // c:\Windows\...
-        String message = "Hello \"World\"";
-        String path = "c:\\Windows\\Desktop\\...";
-        String newLine = "c:\nWindows\nDesktop\n";
-        String tabLine = "c:\tWindows\tDesktop\t";
-        System.out.println(message);
-        System.out.println(path);
-        System.out.println(newLine);
-        System.out.println(tabLine);
+        int[] numbers = new int[5];
+        numbers[0] = 1;
+        numbers[1] = 2;
+        System.out.println(Arrays.toString(numbers));
+
+        int[] otherNumbers = { 2, 3, 5, 1, 4};
+        System.out.println(otherNumbers.length);
+        Arrays.sort(otherNumbers);
+        System.out.println(Arrays.toString(otherNumbers));
     }
 }
