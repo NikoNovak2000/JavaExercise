@@ -1,18 +1,26 @@
+import java.util.Scanner;
+
 public class Main {
     static void main(String[] args) {
-        String role = "admin";
+        String input = "";
 
-        switch (role) {
-            case "admin":
-                System.out.println("You are an admin.");
-                break;
+        Scanner scanner = new Scanner(System.in);
 
-            case "moderator":
-                System.out.println("You are a moderator.");
-                break;
-
-            default:
-                System.out.println("You are a guest.");
+        while (!input.equals("quit")){
+            System.out.println("Input: ");
+            input = scanner.next().toLowerCase();
+            if (!input.equals("quit")){
+                System.out.println(input);
+            }
         }
+
+        do {
+            System.out.println("Input: ");
+            input = scanner.next().toLowerCase();
+            if (input.equals("quit")){
+               break;
+            }
+            System.out.println(input);
+        } while (!input.equals("quit"));
     }
 }
