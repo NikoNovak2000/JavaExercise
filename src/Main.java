@@ -2,25 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     static void main(String[] args) {
-        String input = "";
+        String[] fruits = { "Apple", "Mango", "Orange" };
 
-        Scanner scanner = new Scanner(System.in);
-
-        while (!input.equals("quit")){
-            System.out.println("Input: ");
-            input = scanner.next().toLowerCase();
-            if (!input.equals("quit")){
-                System.out.println(input);
-            }
+        for (int i = 0; i < fruits.length; i++){
+            System.out.println(fruits[i]);
         }
 
-        do {
-            System.out.println("Input: ");
-            input = scanner.next().toLowerCase();
-            if (input.equals("quit")){
-               break;
-            }
-            System.out.println(input);
-        } while (!input.equals("quit"));
+        for (String fruit : fruits){
+            System.out.println(fruit);
+        }
     }
 }
