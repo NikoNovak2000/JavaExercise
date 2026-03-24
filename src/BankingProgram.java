@@ -6,7 +6,7 @@ public class BankingProgram {
         Scanner scanner = new Scanner(System.in);
         boolean isRunning = true;
         int choice = 0;
-        double balance = 500F;
+        double balance = 500.8528521041249F;
 
         seperateStuff();
         System.out.println("BANKING APP");
@@ -59,7 +59,7 @@ public class BankingProgram {
     }
 
     static void showBalance(double balance) {
-        System.out.println("Your balance is: " + balance);
+        System.out.printf("Your balance is: $%.2f\n", balance);
     }
 
     static double Deposit(Scanner scanner, double balance){
@@ -83,6 +83,10 @@ public class BankingProgram {
 
         if (withdrawAmount > balance) {
             System.out.println("Error. Can not withdraw more than you have.");
+            return balance;
+        }
+        else if (withdrawAmount < 0){
+            System.out.println("Error. Can not withdraw negative amount.");
             return balance;
         }
 
