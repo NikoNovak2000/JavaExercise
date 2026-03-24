@@ -3,41 +3,41 @@ import java.util.Scanner;
 
 public class Arrays {
     static void main(String[] args) {
-        String[] fruits = { "apple", "banana", "cherry", "coconut" };
-
-        fruits[2] = "pear";
-        int numOfFruits = fruits.length;
-
-        System.out.println(numOfFruits);
-
-        for (int i = 0; i < fruits.length; i++){
-            System.out.println(fruits[i]);
-        }
-        // Arrays.fill(fruits, "pineapple"); fill everything with pineapple
-
-        // Enhanced for loop
-        for (String fruit : fruits){
-            System.out.println(fruit);
-        }
-        System.out.println("*******************************");
+        int[] numbers = { 1, 9, 2, 8, 3, 5, 4 };
+        String[] fruits = {"apple", "orange", "banana"};
+        int target = 5;
+        boolean isFound = false;
+        String targetString;
+        boolean isFoundString = false;
 
         Scanner scanner = new Scanner(System.in);
-        String[] foods;
-        int size;
 
-        System.out.print("What number of food do you want to store?");
-        size = scanner.nextInt();
-        scanner.nextLine();
-
-        foods = new String[size];
-
-        for(int i = 0; i < foods.length; i++){
-            System.out.print("Enter a food:");
-            foods[i] = scanner.nextLine();
+        for (int i = 0; i < numbers.length; i++) {
+            if (target == numbers[i]) {
+                System.out.println("Element found at index: " + i);
+                isFound = true;
+                break;
+            }
         }
 
-        for (String food : foods){
-            System.out.println(food);
+        if(!isFound){
+                System.out.println("Element not found. Missing from the array.");
         }
+
+        System.out.print("Enter a target fruit: ");
+        targetString = scanner.nextLine();
+
+        for (int i = 0; i < fruits.length; i++) {
+            if (fruits[i].equals(targetString)) {
+                System.out.println("Element found at index: " + i);
+                isFoundString = true;
+                break;
+            }
+        }
+
+        if(!isFoundString){
+            System.out.println("Element not found. Missing from the array.");
+        }
+
     }
 }
