@@ -2,28 +2,26 @@ package OOP;
 
 public class Main {
     static void main(String[] args) {
-        Student student1 = new Student("Spongebob", 30, 3.2);
-        Student student2 = new Student("Patrick", 29, 2.2);
-        Student student3 = new Student("Squidward", 56, 4.1);
 
-        System.out.println(student1.name);
-        System.out.println(student1.age);
-        System.out.println(student1.gpa);
-        System.out.println(student1.isEnrolled);
+        User user1 = new User("Hank");
+        User user2 = new User("Patrick", "patrickstar@gmail.com");
+        User user3 = new User("Syndra", "jamesyndra@gmail.com");
+        User user4 = new User();
 
-        System.out.println(student2.name);
-        System.out.println(student2.age);
-        System.out.println(student2.gpa);
-        System.out.println(student2.isEnrolled);
+        System.out.println(user1.username);
+        System.out.println(user1.email);
+        System.out.println(user1.age);
 
+        System.out.println(user2.username);
+        System.out.println(user2.email);
+        System.out.println(user2.age);
 
-        System.out.println(student3.name);
-        System.out.println(student3.age);
-        System.out.println(student3.gpa);
-        System.out.println(student3.isEnrolled);
+        System.out.println(user3.username);
+        System.out.println(user3.email);
+        System.out.println(user3.age);
 
-        student1.study();
-        student2.study();
-        student3.study();
+        System.out.println(user4.username);
+        System.out.println(user4.email);
+        System.out.println(user4.age);
     }
 }
