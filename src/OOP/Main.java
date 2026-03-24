@@ -3,25 +3,19 @@ package OOP;
 public class Main {
     static void main(String[] args) {
 
-        User user1 = new User("Hank");
-        User user2 = new User("Patrick", "patrickstar@gmail.com");
-        User user3 = new User("Syndra", "jamesyndra@gmail.com");
-        User user4 = new User();
+        Car car1 = new Car("Mustang", "Red");
+        Car car2 = new Car("Qashqai", "Dark Blue");
+        Car car3 = new Car("Charger", "Yellow");
 
-        System.out.println(user1.username);
-        System.out.println(user1.email);
-        System.out.println(user1.age);
+        // Anonymous object Corvette
+        Car[] cars = {car1, car2, car3, new Car("Corvette", "Black")};
 
-        System.out.println(user2.username);
-        System.out.println(user2.email);
-        System.out.println(user2.age);
+        for(Car car : cars){
+            car.color = "black";
+        }
 
-        System.out.println(user3.username);
-        System.out.println(user3.email);
-        System.out.println(user3.age);
-
-        System.out.println(user4.username);
-        System.out.println(user4.email);
-        System.out.println(user4.age);
+        for(Car car : cars){
+            car.drive();
+        }
     }
 }
