@@ -1,4 +1,4 @@
-package OOP.MethodOvveride;
+package OOP.MethodOverride;
 
 public class Main {
      static void main(String[] args){
