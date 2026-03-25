@@ -1,4 +1,4 @@
-package OOP.inheritance;
+package OOP.Inheritance;
 
 public class Organism {
 
