@@ -1,4 +1,4 @@
-package OOP;
+package OOP.Basics;
 
 public class Friend {
 
