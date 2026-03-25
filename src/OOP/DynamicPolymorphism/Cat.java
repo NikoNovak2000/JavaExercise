@@ -1,0 +1,9 @@
+package OOP.DynamicPolymorphism;
+
+public class Cat extends Animal{
+
+    @Override
+    void speak(){
+        System.out.println("Meow!");
+    }
+}
