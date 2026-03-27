@@ -74,15 +74,15 @@ public class Main {
                 }
             }
             else {
-                wrongGuesses++;
-                for (char attemptedWord : attemptedWords) {
-                    if (guess == attemptedWord){
-                        wrongGuesses++;
-                        System.out.println("You already tried this letter. This is a double penalty.");
-                    }
+                if (attemptedWords.contains(guess)){
+                    wrongGuesses += 2;
+                    System.out.println("You already tried this letter. This is a double penalty.");
                 }
-                attemptedWords.add(guess);
-                System.out.println("Wrong guess!");
+                else{
+                    attemptedWords.add(guess);
+                    wrongGuesses ++;
+                    System.out.println("Wrong guess!");
+                }
             }
         }
 
@@ -126,11 +126,11 @@ public class Main {
                       /|\\
                       /
                       """;
-            case 6 ->  """
-                       o
-                      /|\\
-                      / \\
-                      """;
+            case 6, 7 ->"""
+                         o
+                        /|\\
+                        / \\
+                        """;
             default -> "";
         };
     }
