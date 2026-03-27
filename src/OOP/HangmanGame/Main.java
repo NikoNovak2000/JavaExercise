@@ -33,6 +33,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         ArrayList<Character> wordState = new ArrayList<>();
+        ArrayList<Character> attemptedWords = new ArrayList<>();
         int wrongGuesses = 0;
 
         for(int i = 0; i < randomWord.length(); i++){
@@ -74,6 +75,13 @@ public class Main {
             }
             else {
                 wrongGuesses++;
+                for (char attemptedWord : attemptedWords) {
+                    if (guess == attemptedWord){
+                        wrongGuesses++;
+                        System.out.println("You already tried this letter. This is a double penalty.");
+                    }
+                }
+                attemptedWords.add(guess);
                 System.out.println("Wrong guess!");
             }
         }
